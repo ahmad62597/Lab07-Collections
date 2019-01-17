@@ -23,3 +23,15 @@ namespace CardDeck.Classes
         {
             return GetEnumerator();
         }
+
+        // Adds a new card to the deck. If the deck is too small, resizes
+        // the deck to twice the previous length, then adds card
+        
+        public void Add(T card)
+        {
+            if (count == cards.Length)
+            {
+                Array.Resize(ref cards, cards.Length * 2);
+            }
+            cards[count++] = card;
+        }
