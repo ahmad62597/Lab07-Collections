@@ -13,6 +13,13 @@ namespace CardDeckCollections.Classes
             Type = type;
         }
     }
+    public enum Suit
+    {
+        Hearts,
+        Diamonds,
+        Clubs,
+        Spades
+    }
 
 }
 
