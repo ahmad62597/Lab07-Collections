@@ -51,7 +51,22 @@ namespace CardDeck.Classes
                 }
             }
 
-            
+            //returns cards in an array that have specific suit
+            public T[] ReturnSuit(Suit suit)
+            {
+                List<T> cardsWithSameSuit = new List<T>();
+                for (int i = 0; i < count; i++)
+                {
+                    Card currentCard = (Card)Convert.ChangeType(cards[i], typeof(Card));
+                    //If card has the same suit, add it
+                    if (currentCard.Suit == suit)
+                    {
+                        cardsWithSameSuit.Add(cards[i]);
+                    }
+                }
+
+                return cardsWithSameSuit.ToArray();
+            }
 
 
 
